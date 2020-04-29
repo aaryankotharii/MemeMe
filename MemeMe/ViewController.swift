@@ -21,30 +21,34 @@ class ViewController: UIViewController {
     let memeTextFieldDelegate = MemeTextFieldDelegate()
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor.white,
-        NSAttributedString.Key.foregroundColor: UIColor.black,
+        NSAttributedString.Key.strokeColor: UIColor.black,
+        NSAttributedString.Key.foregroundColor: UIColor.white,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  2.0
+        NSAttributedString.Key.strokeWidth:  -5.0,
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        topTextField.delegate = memeTextFieldDelegate
-        bottomTextField.delegate = memeTextFieldDelegate
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        // Do any additional setup after loading the view.
+        textFieldSetUp(bottomTextField)
+        textFieldSetUp(topTextField)
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-         subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+    }
+    
+    private func textFieldSetUp(_ textfield : UITextField){
+       textfield.delegate = memeTextFieldDelegate
+       textfield.textAlignment = .center
+       textfield.defaultTextAttributes = memeTextAttributes
     }
     
     func subscribeToKeyboardNotifications() {
