@@ -36,21 +36,15 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-UT-hsy">
-                                <rect key="frame" x="57" y="188" width="300" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-UT-hsy">
+                                <rect key="frame" x="25" y="188" width="364" height="21.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="3JT-9v-cy4"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Bottom" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-UB-60q">
-                                <rect key="frame" x="57" y="679" width="300" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="Bottom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-UB-60q">
+                                <rect key="frame" x="25" y="694.5" width="364" height="18.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="fgi-VM-liV"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -62,13 +56,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ro-Hh-OpE" secondAttribute="bottom" id="CcW-vP-f90"/>
                             <constraint firstItem="gZm-UB-60q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9L-Om-QTc"/>
                             <constraint firstItem="Zmx-UT-hsy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="OZI-LG-ioD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZm-UB-60q" secondAttribute="trailing" constant="25" id="OfH-JS-Gts"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kgt-59-Tot" secondAttribute="trailing" id="ca2-AU-w3W"/>
+                            <constraint firstItem="gZm-UB-60q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dyE-Sy-ygR"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gOr-IJ-Ows"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kzR-pK-kTs"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGb-Fu-lYP"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="Kgt-59-Tot" secondAttribute="bottom" id="nAF-1o-vj8"/>
+                            <constraint firstItem="Zmx-UT-hsy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="rmj-6G-eMX"/>
                             <constraint firstItem="Zmx-UT-hsy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t7s-uY-GiR"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u5Q-A2-QwO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zmx-UT-hsy" secondAttribute="trailing" constant="25" id="wBM-5m-vuZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

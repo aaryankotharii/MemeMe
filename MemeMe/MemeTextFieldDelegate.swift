@@ -11,9 +11,17 @@ import UIKit
 
 class MemeTextFieldDelegate: NSObject, UITextFieldDelegate {
     
+    var defaultText : Bool = true
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if defaultText {
+            textField.text = ""
+            defaultText = false
+        }
+    }
 }

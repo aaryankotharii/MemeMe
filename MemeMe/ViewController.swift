@@ -84,17 +84,17 @@ class ViewController: UIViewController {
 
     
     @IBAction func pickAnImageFromAlbum(_ sender: UIBarButtonItem) {
-         let imagePicker = UIImagePickerController()
-         imagePicker.delegate = self
-         imagePicker.sourceType = .photoLibrary
-         imagePicker.allowsEditing = true
-         present(imagePicker, animated: true, completion: nil)
+        presentImagePicker(.photoLibrary)
      }
     
     @IBAction func pickAnImageFromCamera(_ sender: UIBarButtonItem) {
+        presentImagePicker(.camera)
+    }
+    
+    func presentImagePicker(_ source : UIImagePickerController.SourceType){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
+        imagePicker.sourceType = source
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
     }
@@ -130,11 +130,14 @@ class ViewController: UIViewController {
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
+        
+        self.ta
 
         return memedImage
     }
     
 }
+
 
 //MARK:- PickerController Delegate Methods
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
