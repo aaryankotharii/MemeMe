@@ -14,7 +14,8 @@
 		5B082CD12458AB1E009A733B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B082CD02458AB1E009A733B /* Assets.xcassets */; };
 		5B082CD42458AB1E009A733B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B082CD22458AB1E009A733B /* LaunchScreen.storyboard */; };
 		5B082CDE2458B311009A733B /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B082CDD2458B311009A733B /* Meme.swift */; };
-		5BAAE3C7245B0BA500509CBA /* SentMemesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3C6245B0BA500509CBA /* SentMemesCollectionViewController.swift */; };
+		5BAAE3C9245B0ECA00509CBA /* SentMemesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3C8245B0ECA00509CBA /* SentMemesCollectionVC.swift */; };
+		5BAAE3CC245B101E00509CBA /* SentMemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3CB245B101E00509CBA /* SentMemesCollectionViewCell.swift */; };
 		5BEA4D05245A8986008B7391 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA4D04245A8986008B7391 /* Impact.ttf */; };
 		5BEA4D0A245AA782008B7391 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA4D09245AA782008B7391 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +30,8 @@
 		5B082CD32458AB1E009A733B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B082CD52458AB1E009A733B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B082CDD2458B311009A733B /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
-		5BAAE3C6245B0BA500509CBA /* SentMemesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewController.swift; sourceTree = "<group>"; };
+		5BAAE3C8245B0ECA00509CBA /* SentMemesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionVC.swift; sourceTree = "<group>"; };
+		5BAAE3CB245B101E00509CBA /* SentMemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewCell.swift; sourceTree = "<group>"; };
 		5BEA4D04245A8986008B7391 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		5BEA4D09245AA782008B7391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				5B082CC92458AB18009A733B /* SceneDelegate.swift */,
 				5BEA4D08245AA775008B7391 /* Utilities */,
 				5BEA4D06245AA75F008B7391 /* Model */,
+				5BAAE3CA245B0FCD00509CBA /* View */,
 				5BEA4D07245AA76A008B7391 /* Controller */,
 				5B082CCD2458AB18009A733B /* Main.storyboard */,
 				5B082CD02458AB1E009A733B /* Assets.xcassets */,
@@ -76,6 +79,14 @@
 				5BEA4D03245A8978008B7391 /* Fonts */,
 			);
 			path = MemeMe;
+			sourceTree = "<group>";
+		};
+		5BAAE3CA245B0FCD00509CBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BAAE3CB245B101E00509CBA /* SentMemesCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5BEA4D03245A8978008B7391 /* Fonts */ = {
@@ -98,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				5B082CCB2458AB18009A733B /* MemeEditorVC.swift */,
-				5BAAE3C6245B0BA500509CBA /* SentMemesCollectionViewController.swift */,
+				5BAAE3C8245B0ECA00509CBA /* SentMemesCollectionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,8 +195,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B082CCC2458AB18009A733B /* MemeEditorVC.swift in Sources */,
+				5BAAE3CC245B101E00509CBA /* SentMemesCollectionViewCell.swift in Sources */,
 				5BEA4D0A245AA782008B7391 /* Extensions.swift in Sources */,
-				5BAAE3C7245B0BA500509CBA /* SentMemesCollectionViewController.swift in Sources */,
+				5BAAE3C9245B0ECA00509CBA /* SentMemesCollectionVC.swift in Sources */,
 				5B082CC82458AB18009A733B /* AppDelegate.swift in Sources */,
 				5B082CCA2458AB18009A733B /* SceneDelegate.swift in Sources */,
 				5B082CDE2458B311009A733B /* Meme.swift in Sources */,

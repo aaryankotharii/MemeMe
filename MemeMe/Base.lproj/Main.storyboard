@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -136,20 +137,53 @@
             <point key="canvasLocation" x="2151" y="62"/>
         </scene>
         <!--Item-->
-        <scene sceneID="VEx-Bi-WJH">
+        <scene sceneID="SZV-8b-PVb">
             <objects>
-                <viewController id="Rd1-6h-F5A" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="msD-zP-f21">
+                <collectionViewController id="t0v-wM-2Bq" customClass="SentMemesCollectionVC" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="afM-uq-yL5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="q0K-bu-FWi"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zpe-wr-Nby"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WJT-bq-5kR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zKL-9V-ph7">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memeCollectionCell" id="stb-pm-7Sp" customClass="SentMemesCollectionViewCell" customModule="MemeMe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a6Z-Su-rSe">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGg-eI-clH">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eGg-eI-clH" firstAttribute="leading" secondItem="a6Z-Su-rSe" secondAttribute="leading" id="8Gu-tK-bZr"/>
+                                        <constraint firstAttribute="trailing" secondItem="eGg-eI-clH" secondAttribute="trailing" id="XQa-Es-vbs"/>
+                                        <constraint firstAttribute="bottom" secondItem="eGg-eI-clH" secondAttribute="bottom" id="YfM-Ku-4Ti"/>
+                                        <constraint firstItem="eGg-eI-clH" firstAttribute="top" secondItem="a6Z-Su-rSe" secondAttribute="top" id="sAi-x5-LoK"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="memeImageView" destination="eGg-eI-clH" id="2hx-Fg-7UM"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="t0v-wM-2Bq" id="KHh-if-1px"/>
+                            <outlet property="delegate" destination="t0v-wM-2Bq" id="UmZ-9w-OUL"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="dko-qG-SBB"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfv-7a-78W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2152" y="814"/>
+            <point key="canvasLocation" x="2111.594202898551" y="848.4375"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jRw-yw-wCs">
@@ -157,12 +191,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Boj-Ga-hQV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NGa-X8-eWf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="ojx-Dn-qfz" kind="relationship" relationship="viewControllers" id="1fR-wF-Ec2"/>
-                        <segue destination="Rd1-6h-F5A" kind="relationship" relationship="viewControllers" id="alP-KP-X5b"/>
+                        <segue destination="t0v-wM-2Bq" kind="relationship" relationship="viewControllers" id="hVp-Bm-aEG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVc-eA-F6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
