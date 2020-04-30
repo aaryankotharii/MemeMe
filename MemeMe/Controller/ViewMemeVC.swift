@@ -12,10 +12,10 @@ class ViewMemeVC: UIViewController {
 
     @IBOutlet var memeImageView: UIImageView!
     
+    var meme : UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.memeImageView.image = meme
     }
-
 }

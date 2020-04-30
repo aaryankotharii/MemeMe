@@ -168,7 +168,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="TxD-5I-vwO" kind="show" id="MMf-LO-K9a"/>
+                        <segue destination="TxD-5I-vwO" kind="show" identifier="tomeme2" id="MMf-LO-K9a"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfv-7a-78W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -264,7 +264,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <segue destination="TxD-5I-vwO" kind="show" id="EQc-ko-XUe"/>
+                        <segue destination="TxD-5I-vwO" kind="show" identifier="tomeme1" id="EQc-ko-XUe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZf-rr-bEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -341,7 +341,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MMf-LO-K9a"/>
+        <segue reference="EQc-ko-XUe"/>
         <segue reference="1f8-3T-SGA"/>
     </inferredMetricsTieBreakers>
     <resources>
