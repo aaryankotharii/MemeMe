@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedString.Key.font: UIFont(name: "Impact", size: 40)!,
         NSAttributedString.Key.strokeWidth:  -5.0,
     ]
     
@@ -39,6 +39,8 @@ class ViewController: UIViewController {
         textFieldSetUp(topTextField)
         shareButton.isEnabled = false
         hideKeyboardWhenTappedAround()
+        bottomTextField.textAlignment = .center
+        topTextField.textAlignment = .center
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,7 +56,6 @@ class ViewController: UIViewController {
     
     private func textFieldSetUp(_ textfield : UITextField){
        textfield.delegate = memeTextFieldDelegate
-       textfield.textAlignment = .center
        textfield.defaultTextAttributes = memeTextAttributes
     }
     
@@ -136,9 +137,21 @@ class ViewController: UIViewController {
 //MARK:- PickerController Delegate Methods
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[.originalImage] as? UIImage {
-                imagePickerView.image = image
+        
+        var selectedImageFromPicker : UIImage?
+            
+        if let editedImage =  info[.editedImage] as? UIImage{
+                selectedImageFromPicker = editedImage
             }
+            
+        else if let originalImage = info[.originalImage] as? UIImage {
+                selectedImageFromPicker = originalImage
+             }
+        
+        if let selectedImage = selectedImageFromPicker {
+            imagePickerView.image = selectedImage
+        }
+        
          self.dismiss(animated: true, completion: nil )
         shareButton.isEnabled = true  /// Now You Can Share Your Meme
     }

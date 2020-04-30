@@ -37,19 +37,22 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-UT-hsy">
-                                <rect key="frame" x="25" y="144" width="364" height="21.5"/>
+                                <rect key="frame" x="25" y="128" width="364" height="21.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-UB-60q">
-                                <rect key="frame" x="25" y="694.5" width="364" height="18.5"/>
+                                <rect key="frame" x="25" y="754.5" width="364" height="18.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pkh-dl-1qC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aKF-Lo-M54"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Share" image="square.and.arrow.up" catalog="system" id="JbZ-lK-6xP">
                                         <connections>
@@ -66,14 +69,14 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="38P-Ca-H4b"/>
-                            <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="gZm-UB-60q" secondAttribute="bottom" constant="100" id="3hn-FC-HYa"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Db-ZO-4Gy"/>
+                            <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="gZm-UB-60q" secondAttribute="bottom" constant="40" id="78p-Bb-X1R"/>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8jn-A9-4pq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ro-Hh-OpE" secondAttribute="bottom" id="CcW-vP-f90"/>
                             <constraint firstItem="gZm-UB-60q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9L-Om-QTc"/>
-                            <constraint firstItem="Zmx-UT-hsy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="OZI-LG-ioD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZm-UB-60q" secondAttribute="trailing" constant="25" id="OfH-JS-Gts"/>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="top" secondItem="cs9-bn-Cxc" secondAttribute="bottom" id="Ugg-xi-f8h"/>
+                            <constraint firstItem="Zmx-UT-hsy" firstAttribute="top" secondItem="Pkh-dl-1qC" secondAttribute="bottom" constant="40" id="bpZ-7T-I6Q"/>
                             <constraint firstAttribute="trailing" secondItem="cs9-bn-Cxc" secondAttribute="trailing" id="cMZ-tF-UxC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kgt-59-Tot" secondAttribute="trailing" id="ca2-AU-w3W"/>
                             <constraint firstItem="gZm-UB-60q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dyE-Sy-ygR"/>

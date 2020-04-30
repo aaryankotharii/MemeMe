@@ -15,6 +15,7 @@
 		5B082CD42458AB1E009A733B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B082CD22458AB1E009A733B /* LaunchScreen.storyboard */; };
 		5B082CDC2458AF18009A733B /* MemeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B082CDB2458AF18009A733B /* MemeTextFieldDelegate.swift */; };
 		5B082CDE2458B311009A733B /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B082CDD2458B311009A733B /* Meme.swift */; };
+		5BEA4D05245A8986008B7391 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA4D04245A8986008B7391 /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5B082CD52458AB1E009A733B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B082CDB2458AF18009A733B /* MemeTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextFieldDelegate.swift; sourceTree = "<group>"; };
 		5B082CDD2458B311009A733B /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		5BEA4D04245A8986008B7391 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +71,17 @@
 				5B082CD52458AB1E009A733B /* Info.plist */,
 				5B082CDB2458AF18009A733B /* MemeTextFieldDelegate.swift */,
 				5B082CDD2458B311009A733B /* Meme.swift */,
+				5BEA4D03245A8978008B7391 /* Fonts */,
 			);
 			path = MemeMe;
+			sourceTree = "<group>";
+		};
+		5BEA4D03245A8978008B7391 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5BEA4D04245A8986008B7391 /* Impact.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BEA4D05245A8986008B7391 /* Impact.ttf in Resources */,
 				5B082CD42458AB1E009A733B /* LaunchScreen.storyboard in Resources */,
 				5B082CD12458AB1E009A733B /* Assets.xcassets in Resources */,
 				5B082CCF2458AB18009A733B /* Main.storyboard in Resources */,
