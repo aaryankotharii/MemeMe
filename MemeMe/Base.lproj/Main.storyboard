@@ -106,10 +106,10 @@
                                 <rect key="frame" x="302" y="7" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4C-2q-TLB"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="cancelClicked:" destination="BYZ-38-t0r" id="VxG-a8-zeA"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -173,7 +173,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="xeQ-x5-Cha">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="S8I-es-6c7">
-                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="1f8-3T-SGA"/>
                             </connections>
@@ -353,8 +353,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EQc-ko-XUe"/>
-        <segue reference="Bws-3v-1EI"/>
+        <segue reference="MMf-LO-K9a"/>
+        <segue reference="1f8-3T-SGA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>

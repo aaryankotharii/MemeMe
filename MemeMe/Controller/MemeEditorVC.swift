@@ -127,8 +127,6 @@ class MemeEditorVC: UIViewController {
         }
     }
     
-    
-    
     func save() {
         // Create the meme
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: memedImage)
@@ -137,6 +135,10 @@ class MemeEditorVC: UIViewController {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
+    }
+    
+    @IBAction func cancelClicked(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
