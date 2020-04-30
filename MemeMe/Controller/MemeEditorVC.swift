@@ -54,7 +54,7 @@ class MemeEditorVC: UIViewController {
         super.viewWillAppear(animated)
         //INITIAL SETUP
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        subscribeToKeyboardNotifications()  /// ADD OBSERVERS
+        subscribeToKeyboardNotifications()  
         setupTextFields()
     }
     
