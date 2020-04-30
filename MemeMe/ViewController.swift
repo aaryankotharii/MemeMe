@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     
     private func textFieldSetUp(_ textfield : UITextField){
        textfield.delegate = memeTextFieldDelegate
-        //textfield.textAlignment = .center
+       textfield.textAlignment = .center
        textfield.defaultTextAttributes = memeTextAttributes
     }
     
@@ -76,18 +76,25 @@ class ViewController: UIViewController {
     @IBAction func shareMeme(_ sender: Any) {
         let memedImage = generateMemedImage()
            
-           let shareItems = [memedImage]
-           let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-           activityViewController.popoverPresentationController?.sourceView = self.view
-        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.print, UIActivity.ActivityType.postToWeibo, UIActivity.ActivityType.copyToPasteboard, UIActivity.ActivityType.addToReadingList, UIActivity.ActivityType.postToVimeo]
-           
+       let shareItems = [memedImage]
+       let activityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+       activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [UIActivity.ActivityType.print,
+                                                        UIActivity.ActivityType.postToWeibo,
+                                                        UIActivity.ActivityType.postToFacebook,
+                                                        UIActivity.ActivityType.postToTwitter,
+                                                        UIActivity.ActivityType.mail,
+                                                        UIActivity.ActivityType.copyToPasteboard,
+                                                        UIActivity.ActivityType.addToReadingList,
+                                                        UIActivity.ActivityType.postToVimeo]
+       
         self.present(activityViewController, animated: true, completion: nil)
-           
-           activityViewController.completionWithItemsHandler = { activity, success, items, error in
-           
-            self.save()
+       
+        activityViewController.completionWithItemsHandler = { activity, success, items, error in
+       
+        self.save()
 
-            activityViewController.dismiss(animated: true, completion: nil)
+        activityViewController.dismiss(animated: true, completion: nil)
             
            }
         
@@ -116,6 +123,7 @@ class ViewController: UIViewController {
 
         return memedImage
     }
+
     
 }
 
@@ -147,14 +155,19 @@ extension ViewController {
 
    func unsubscribeFromKeyboardNotifications() {
        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+       NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
    }
    
    @objc func keyboardWillShow(_ notification:Notification) {
+    if bottomTextField.isFirstResponder {
        view.frame.origin.y -= getKeyboardHeight(notification)
+    }
    }
    
    @objc func keyboardWillHide(_ notification:Notification) {
+    if bottomTextField.isFirstResponder {
        view.frame.origin.y = 0
+        }
    }
 
    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
