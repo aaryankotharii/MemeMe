@@ -69,6 +69,7 @@ extension SentMemesTableVC {
 // MARK:- TableView Delegate Methods
 extension SentMemesTableVC {
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let meme = memes[indexPath.row]
@@ -79,8 +80,17 @@ extension SentMemesTableVC {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        var height : CGFloat!
+        
+        if  UIDevice.current.orientation.isPortrait {
+            height = self.view.frame.height / 6
+        }
+        else {
+            height = self.view.frame.height / 3
+        }
+        return height
     }
+    
     
     //MARK:- Delete row
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

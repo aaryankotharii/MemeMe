@@ -126,11 +126,11 @@
             </objects>
             <point key="canvasLocation" x="4022" y="450"/>
         </scene>
-        <!--Sent Memes CollectionVC-->
+        <!--Sent Memes-->
         <scene sceneID="SZV-8b-PVb">
             <objects>
                 <collectionViewController id="t0v-wM-2Bq" customClass="SentMemesCollectionVC" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="afM-uq-yL5">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="afM-uq-yL5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -171,7 +171,7 @@
                             <outlet property="delegate" destination="t0v-wM-2Bq" id="UmZ-9w-OUL"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="xeQ-x5-Cha">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="xeQ-x5-Cha">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="S8I-es-6c7">
                             <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -210,7 +210,7 @@
         <scene sceneID="mSU-w7-I8h">
             <objects>
                 <tableViewController id="4a7-4w-I8d" customClass="SentMemesTableVC" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R1h-cP-bal">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="R1h-cP-bal">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -283,11 +283,11 @@
             </objects>
             <point key="canvasLocation" x="3021.739130434783" y="81.696428571428569"/>
         </scene>
-        <!--Item-->
+        <!--Table-->
         <scene sceneID="Apy-WR-Dkf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h9c-61-vXE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="sgU-eY-iNk"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="table" selectedImage="table" id="sgU-eY-iNk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gyE-xx-45D">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -302,11 +302,11 @@
             </objects>
             <point key="canvasLocation" x="2111.594202898551" y="81.696428571428569"/>
         </scene>
-        <!--Item-->
+        <!--Collection-->
         <scene sceneID="Oe7-GK-kXH">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g7H-5n-ege" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dko-qG-SBB"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="collection" selectedImage="collection" id="dko-qG-SBB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xLb-1W-ML7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -358,7 +358,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="collection" width="30" height="30.5"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="table" width="30" height="30"/>
     </resources>
 </document>
