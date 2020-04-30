@@ -6,4 +6,21 @@
 //  Copyright © 2020 Aaryan Kothari. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+//MARK:- General Extensions
+
+//MARK: hide keyboard on tap
+extension UIViewController {
+    
+    // Function for tap gesture
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true) ///selector action to dissmiss keyboard
+    }
+}
