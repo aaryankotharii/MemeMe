@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MemeEditorVC: UIViewController {
 
-    //MARK:- Outlets
+    //MARK: Outlets
     @IBOutlet var imagePickerView: UIImageView!
     @IBOutlet var cameraButton: UIBarButtonItem!
     @IBOutlet var shareButton: UIBarButtonItem!
@@ -18,10 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet var bottomTextField: UITextField!
     @IBOutlet var topBar: UIToolbar!
     @IBOutlet var bottomBar: UIToolbar!
+    @IBOutlet var superBar: UIView!
     
     
-    
-    //MARK:- Constants
+    //MARK: Constants + Variables
     let memeTextFieldDelegate = MemeTextFieldDelegate()
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -115,6 +115,7 @@ class ViewController: UIViewController {
         
         bottomBar.isHidden = true
         topBar.isHidden = true
+        superBar.isHidden = true
 
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -124,6 +125,8 @@ class ViewController: UIViewController {
         
         bottomBar.isHidden = false
         topBar.isHidden = false
+        superBar.isHidden = false
+
 
         return memedImage
     }
@@ -131,7 +134,7 @@ class ViewController: UIViewController {
 
 
 //MARK:- PickerController Delegate Methods
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension MemeEditorVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         var selectedImageFromPicker : UIImage?
@@ -159,7 +162,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 }
 
 //MARK:- Keyboard show + hide functions
-extension ViewController {
+extension MemeEditorVC {
     
     func subscribeToKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)

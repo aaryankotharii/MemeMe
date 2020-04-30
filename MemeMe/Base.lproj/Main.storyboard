@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme EditorVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorVC" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,18 +69,26 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2e-Uu-BWz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" name="barColor"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" name="barColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="38P-Ca-H4b"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Db-ZO-4Gy"/>
+                            <constraint firstItem="g2e-Uu-BWz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6zH-t8-0hJ"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="gZm-UB-60q" secondAttribute="bottom" constant="40" id="78p-Bb-X1R"/>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8jn-A9-4pq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ro-Hh-OpE" secondAttribute="bottom" id="CcW-vP-f90"/>
                             <constraint firstItem="gZm-UB-60q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9L-Om-QTc"/>
+                            <constraint firstItem="g2e-Uu-BWz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L75-XB-fdY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZm-UB-60q" secondAttribute="trailing" constant="25" id="OfH-JS-Gts"/>
+                            <constraint firstItem="Pkh-dl-1qC" firstAttribute="top" secondItem="g2e-Uu-BWz" secondAttribute="bottom" id="bGT-1y-Qks"/>
                             <constraint firstItem="Zmx-UT-hsy" firstAttribute="top" secondItem="Pkh-dl-1qC" secondAttribute="bottom" constant="40" id="bpZ-7T-I6Q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kgt-59-Tot" secondAttribute="trailing" id="ca2-AU-w3W"/>
+                            <constraint firstAttribute="trailing" secondItem="g2e-Uu-BWz" secondAttribute="trailing" id="di7-GM-uQ7"/>
                             <constraint firstItem="gZm-UB-60q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dyE-Sy-ygR"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="top" secondItem="Pkh-dl-1qC" secondAttribute="bottom" id="gOr-IJ-Ows"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kzR-pK-kTs"/>
@@ -100,6 +108,7 @@
                         <outlet property="cameraButton" destination="DMG-CD-EiR" id="VFd-FQ-b3r"/>
                         <outlet property="imagePickerView" destination="Kgt-59-Tot" id="EvJ-Dt-mVA"/>
                         <outlet property="shareButton" destination="JbZ-lK-6xP" id="Uo4-rf-eZS"/>
+                        <outlet property="superBar" destination="g2e-Uu-BWz" id="BST-PP-SSv"/>
                         <outlet property="topBar" destination="Pkh-dl-1qC" id="2YA-6f-tvr"/>
                         <outlet property="topTextField" destination="Zmx-UT-hsy" id="jJ7-1M-zFs"/>
                     </connections>
@@ -114,7 +123,7 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="barColor">
-            <color red="0.97647058823529409" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
