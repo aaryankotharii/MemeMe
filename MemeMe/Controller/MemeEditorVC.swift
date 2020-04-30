@@ -22,7 +22,7 @@ class MemeEditorVC: UIViewController {
     
     
     //MARK: Constants + Variables
-    
+
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -35,9 +35,9 @@ class MemeEditorVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //INITIAL SETUP
         shareButton.isEnabled = false
         hideKeyboardWhenTappedAround()
-        setupTextFields()
     }
     
     func setupTextFields(){
@@ -52,13 +52,15 @@ class MemeEditorVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //INITIAL SETUP
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
-        subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()  /// ADD OBSERVERS
+        setupTextFields()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications() /// REMOVE OBSERVERS
     }
     
     // MARK:- ImagePicker Functions
