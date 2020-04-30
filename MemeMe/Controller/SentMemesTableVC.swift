@@ -14,20 +14,11 @@ class SentMemesTableVC: UITableViewController {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         return appDelegate.memes
-        
-        func discard(_ at : Int){
-            appDelegate.memes.remove(at: at)
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -106,5 +97,4 @@ class SentMemesTableVC: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
 }
