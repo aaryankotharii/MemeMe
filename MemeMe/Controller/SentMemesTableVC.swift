@@ -81,13 +81,11 @@ extension SentMemesTableVC {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height : CGFloat!
+        var factor : CGFloat!
         
-        if  UIDevice.current.orientation.isPortrait {
-            height = self.view.frame.height / 6
-        }
-        else {
-            height = self.view.frame.height / 3
-        }
+        factor =  UIDevice.current.orientation.isPortrait ? 6 : 3
+        height = self.view.frame.height / factor
+        
         return height
     }
     
