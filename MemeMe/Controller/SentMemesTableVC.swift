@@ -54,11 +54,7 @@ class SentMemesTableVC: UITableViewController {
         
         let meme = memes[indexPath.row]
         
-        var image = UIImage()
-        
-        if let memeImage = meme.memeImage{
-            image = memeImage
-        }
+        let image = meme.memeImage ?? UIImage(systemName: "questionmark")
         
         performSegue(withIdentifier: "tomeme1", sender: image)
     }
