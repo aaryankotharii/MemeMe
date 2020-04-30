@@ -17,11 +17,10 @@ class MemeEditorVC: UIViewController {
     @IBOutlet var topTextField: UITextField!
     @IBOutlet var bottomTextField: UITextField!
     @IBOutlet var bottomBar: UIToolbar!
-    
     @IBOutlet var memeView: UIView!
     
     //MARK: Constants + Variables
-
+    
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -85,20 +84,14 @@ class MemeEditorVC: UIViewController {
     func generateMemedImage() -> UIImage {
         
         // Render view to an image
-
         let renderer = UIGraphicsImageRenderer(bounds: memeView.bounds)
-            let finalImage =  renderer.image { rendererContext in
-                memeView.layer.render(in: rendererContext.cgContext)
-        }
         
-        memedImage = finalImage
+        let finalMeme =  renderer.image { rendererContext in
+            memeView.layer.render(in: rendererContext.cgContext) }
+        
+        memedImage = finalMeme
         
         return memedImage    /// Final meme
-    }
-    
-    // Hides Top + Bottom Bar in Final Meme
-    private func updateViewsForMeme(_ bool : Bool){
-        bottomBar.isHidden = bool
     }
     
     //MARK:- Share Meme
@@ -145,7 +138,6 @@ class MemeEditorVC: UIViewController {
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
     }
-    
 }
 
 

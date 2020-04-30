@@ -53,7 +53,6 @@ class SentMemesCollectionVC: UICollectionViewController {
         return cell
     }
     
-
     // MARK: UICollectionViewDelegate
 
     /*
