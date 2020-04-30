@@ -17,6 +17,7 @@
 		5BAAE3C9245B0ECA00509CBA /* SentMemesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3C8245B0ECA00509CBA /* SentMemesCollectionVC.swift */; };
 		5BAAE3CC245B101E00509CBA /* SentMemesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3CB245B101E00509CBA /* SentMemesCollectionViewCell.swift */; };
 		5BAAE3CE245B116200509CBA /* SentMemesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3CD245B116200509CBA /* SentMemesTableVC.swift */; };
+		5BAAE3D0245B119F00509CBA /* SentMemesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAAE3CF245B119F00509CBA /* SentMemesTableViewCell.swift */; };
 		5BEA4D05245A8986008B7391 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BEA4D04245A8986008B7391 /* Impact.ttf */; };
 		5BEA4D0A245AA782008B7391 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA4D09245AA782008B7391 /* Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		5BAAE3C8245B0ECA00509CBA /* SentMemesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionVC.swift; sourceTree = "<group>"; };
 		5BAAE3CB245B101E00509CBA /* SentMemesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesCollectionViewCell.swift; sourceTree = "<group>"; };
 		5BAAE3CD245B116200509CBA /* SentMemesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesTableVC.swift; sourceTree = "<group>"; };
+		5BAAE3CF245B119F00509CBA /* SentMemesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemesTableViewCell.swift; sourceTree = "<group>"; };
 		5BEA4D04245A8986008B7391 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		5BEA4D09245AA782008B7391 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				5BAAE3CB245B101E00509CBA /* SentMemesCollectionViewCell.swift */,
+				5BAAE3CF245B119F00509CBA /* SentMemesTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				5BAAE3CC245B101E00509CBA /* SentMemesCollectionViewCell.swift in Sources */,
 				5BEA4D0A245AA782008B7391 /* Extensions.swift in Sources */,
 				5BAAE3CE245B116200509CBA /* SentMemesTableVC.swift in Sources */,
+				5BAAE3D0245B119F00509CBA /* SentMemesTableViewCell.swift in Sources */,
 				5BAAE3C9245B0ECA00509CBA /* SentMemesCollectionVC.swift in Sources */,
 				5B082CC82458AB18009A733B /* AppDelegate.swift in Sources */,
 				5B082CCA2458AB18009A733B /* SceneDelegate.swift in Sources */,
