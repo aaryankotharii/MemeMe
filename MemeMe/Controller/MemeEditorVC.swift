@@ -89,7 +89,7 @@ class MemeEditorVC: UIViewController {
         updateViewsForMeme(true)
         
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIGraphicsBeginImageContext(self.imagePickerView.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         memedImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
@@ -144,6 +144,9 @@ class MemeEditorVC: UIViewController {
     func save() {
         // Create the meme
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: memedImage)
+        
+        // add the meme to memes array in AppDelegate
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
     
 }
