@@ -10,7 +10,11 @@ import UIKit
 
 class SentMemesTableVC: UITableViewController {
     
-    
+    var memes : [Meme]! {
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        return appDelegate.memes
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,25 +28,28 @@ class SentMemesTableVC: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return memes.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "memeTableCell", for: indexPath) as! SentMemesTableViewCell
+        
+        let meme = memes[indexPath.row]
+        
+        if let memeImage = meme.memeImage{
+            cell.memeImageView.image = memeImage
+        }
+        
+        cell.memeTopLabel.text = meme.topText
+        cell.memeBotttomLabel.text = meme.bottomText
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
