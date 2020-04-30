@@ -97,7 +97,6 @@ class ViewController: UIViewController {
         activityViewController.dismiss(animated: true, completion: nil)
             
            }
-        
     }
     
     

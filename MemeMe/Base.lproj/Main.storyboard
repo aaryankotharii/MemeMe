@@ -93,12 +93,12 @@
                     </view>
                     <connections>
                         <outlet property="bottomBar" destination="5Ro-Hh-OpE" id="nW8-0L-q2s"/>
-                        <outlet property="bottomTextField" destination="Zmx-UT-hsy" id="q2b-ug-hJG"/>
+                        <outlet property="bottomTextField" destination="gZm-UB-60q" id="Fwf-Gf-uuw"/>
                         <outlet property="cameraButton" destination="DMG-CD-EiR" id="VFd-FQ-b3r"/>
                         <outlet property="imagePickerView" destination="Kgt-59-Tot" id="EvJ-Dt-mVA"/>
                         <outlet property="shareButton" destination="JbZ-lK-6xP" id="Uo4-rf-eZS"/>
                         <outlet property="topBar" destination="Pkh-dl-1qC" id="2YA-6f-tvr"/>
-                        <outlet property="topTextField" destination="gZm-UB-60q" id="8Th-1F-gor"/>
+                        <outlet property="topTextField" destination="Zmx-UT-hsy" id="jJ7-1M-zFs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
