@@ -94,18 +94,21 @@ class ViewController: UIViewController {
        
         activityViewController.completionWithItemsHandler = { activity, success, items, error in
        
-        self.save()
-
-        activityViewController.dismiss(animated: true, completion: nil)
+            guard error == nil else { return }
             
+            if success {
+                self.save()
+                print("Meme successfully shared by"  + (activity?.rawValue ?? "unknown"))
+                activityViewController.dismiss(animated: true, completion: nil)
+                }
            }
     }
     
     
     
     func save() {
-            // Create the meme
-        _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: memedImage)
+        // Create the meme
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memeImage: memedImage)
         }
     
     func generateMemedImage() -> UIImage {
@@ -124,13 +127,6 @@ class ViewController: UIViewController {
 
         return memedImage
     }
-    
-    
-    func  imageViewTapped(){
-        
-    }
-
-    
 }
 
 
