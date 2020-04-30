@@ -219,17 +219,17 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yNv-Hh-EUk">
-                                            <rect key="frame" x="128" y="28.5" width="42" height="41"/>
+                                            <rect key="frame" x="128" y="24.5" width="93" height="49"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-cg-ZvE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST MEME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XE-cg-ZvE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3v-K9-LPw">
-                                                    <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3v-K9-LPw">
+                                                    <rect key="frame" x="0.0" y="24.5" width="93" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -343,8 +343,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MMf-LO-K9a"/>
-        <segue reference="1f8-3T-SGA"/>
+        <segue reference="EQc-ko-XUe"/>
+        <segue reference="Bws-3v-1EI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera" catalog="system" width="128" height="96"/>

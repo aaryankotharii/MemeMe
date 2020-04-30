@@ -55,9 +55,8 @@ extension SentMemesCollectionVC {
         
         let meme = memes[indexPath.item]
         
-        if let memeImage = meme.memeImage {
-            cell.memeImageView.image = memeImage
-        }
+        cell.memeImageView.image = meme.memeImage ?? UIImage(systemName: "questionmark")
+        
         
         return cell
     }

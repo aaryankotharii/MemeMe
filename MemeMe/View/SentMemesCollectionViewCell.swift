@@ -9,6 +9,6 @@
 import UIKit
 
 class SentMemesCollectionViewCell: UICollectionViewCell {
-    
+    //MARK:- Outlet
     @IBOutlet var memeImageView: UIImageView!
 }

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+//MARK:- Meme Model
+
 struct Meme {
     var topText: String = "TOP"
     var bottomText: String = "BOTTOM"

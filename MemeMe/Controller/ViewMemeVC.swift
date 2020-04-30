@@ -10,9 +10,10 @@ import UIKit
 
 class ViewMemeVC: UIViewController {
 
+    //MARK: Outlets
     @IBOutlet var memeImageView: UIImageView!
     
-    var meme : UIImage!
+    var meme : UIImage!  /// MEME Image
     
     override func viewDidLoad() {
         super.viewDidLoad()
