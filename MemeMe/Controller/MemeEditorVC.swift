@@ -34,7 +34,7 @@ class MemeEditorVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         shareButton.isEnabled = false
         hideKeyboardWhenTappedAround()
         setupTextFields()
@@ -42,7 +42,6 @@ class MemeEditorVC: UIViewController {
     
     func setupTextFields(){
         for textfield : UITextField in [bottomTextField,topTextField] {
-            textfield.delegate = self
             textfield.defaultTextAttributes = memeTextAttributes
         }
         
@@ -215,22 +214,19 @@ extension MemeEditorVC {
     }
 }
 
+//MARK:- UITextField Delegate Methods
 extension MemeEditorVC : UITextFieldDelegate {
+    
+    //MARK: Textfield empties first time
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField.text == "BOTTOM" || textField.text == "TOP" {
+            textField.text = ""
+        }
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        switch textField.text {
-        case "TOP", "BOTTOM":
-            textField.text = ""
-        case "":
-            textField.text =  bottomTextField.isFirstResponder ? "BOTTOM" : "TOP"
-        default:
-            print("yo yo")
-        }
     }
 }
 

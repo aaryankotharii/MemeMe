@@ -16,10 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-59-Tot">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ro-Hh-OpE">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <constraints>
@@ -38,21 +34,6 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-UT-hsy">
-                                <rect key="frame" x="25" y="128" width="364" height="21.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-UB-60q">
-                                <rect key="frame" x="25" y="754.5" width="364" height="18.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pkh-dl-1qC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
@@ -73,44 +54,62 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" name="barColor"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-59-Tot">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wp9-3G-sKJ">
+                                <rect key="frame" x="25" y="128" width="364" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="b7T-Ov-hfB"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMd-cM-WGN">
+                                <rect key="frame" x="25" y="754.5" width="364" height="18.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FMZ-Pl-gX0"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="38P-Ca-H4b"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5Db-ZO-4Gy"/>
                             <constraint firstItem="g2e-Uu-BWz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6zH-t8-0hJ"/>
-                            <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="gZm-UB-60q" secondAttribute="bottom" constant="40" id="78p-Bb-X1R"/>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8jn-A9-4pq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ro-Hh-OpE" secondAttribute="bottom" id="CcW-vP-f90"/>
-                            <constraint firstItem="gZm-UB-60q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9L-Om-QTc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wp9-3G-sKJ" secondAttribute="trailing" constant="25" id="DH4-kS-rUX"/>
                             <constraint firstItem="g2e-Uu-BWz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L75-XB-fdY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZm-UB-60q" secondAttribute="trailing" constant="25" id="OfH-JS-Gts"/>
+                            <constraint firstItem="Wp9-3G-sKJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="QUb-mw-np7"/>
+                            <constraint firstItem="RMd-cM-WGN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="T9v-wv-4ti"/>
                             <constraint firstItem="Pkh-dl-1qC" firstAttribute="top" secondItem="g2e-Uu-BWz" secondAttribute="bottom" id="bGT-1y-Qks"/>
-                            <constraint firstItem="Zmx-UT-hsy" firstAttribute="top" secondItem="Pkh-dl-1qC" secondAttribute="bottom" constant="40" id="bpZ-7T-I6Q"/>
+                            <constraint firstItem="Wp9-3G-sKJ" firstAttribute="top" secondItem="Pkh-dl-1qC" secondAttribute="bottom" constant="40" id="cMJ-6K-oh0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kgt-59-Tot" secondAttribute="trailing" id="ca2-AU-w3W"/>
                             <constraint firstAttribute="trailing" secondItem="g2e-Uu-BWz" secondAttribute="trailing" id="di7-GM-uQ7"/>
-                            <constraint firstItem="gZm-UB-60q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dyE-Sy-ygR"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="top" secondItem="Pkh-dl-1qC" secondAttribute="bottom" id="gOr-IJ-Ows"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kzR-pK-kTs"/>
                             <constraint firstItem="Kgt-59-Tot" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGb-Fu-lYP"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="Kgt-59-Tot" secondAttribute="bottom" id="nAF-1o-vj8"/>
+                            <constraint firstItem="5Ro-Hh-OpE" firstAttribute="top" secondItem="RMd-cM-WGN" secondAttribute="bottom" constant="40" id="psc-I6-SOu"/>
                             <constraint firstAttribute="trailing" secondItem="Pkh-dl-1qC" secondAttribute="trailing" id="q1x-Km-U1m"/>
-                            <constraint firstItem="Zmx-UT-hsy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="rmj-6G-eMX"/>
-                            <constraint firstItem="Zmx-UT-hsy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t7s-uY-GiR"/>
                             <constraint firstItem="5Ro-Hh-OpE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="u5Q-A2-QwO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zmx-UT-hsy" secondAttribute="trailing" constant="25" id="wBM-5m-vuZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RMd-cM-WGN" secondAttribute="trailing" constant="25" id="w24-nF-LE4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomBar" destination="5Ro-Hh-OpE" id="nW8-0L-q2s"/>
-                        <outlet property="bottomTextField" destination="gZm-UB-60q" id="Fwf-Gf-uuw"/>
+                        <outlet property="bottomTextField" destination="RMd-cM-WGN" id="HI7-V7-VMq"/>
                         <outlet property="cameraButton" destination="DMG-CD-EiR" id="VFd-FQ-b3r"/>
                         <outlet property="imagePickerView" destination="Kgt-59-Tot" id="EvJ-Dt-mVA"/>
                         <outlet property="shareButton" destination="JbZ-lK-6xP" id="Uo4-rf-eZS"/>
                         <outlet property="superBar" destination="g2e-Uu-BWz" id="BST-PP-SSv"/>
                         <outlet property="topBar" destination="Pkh-dl-1qC" id="2YA-6f-tvr"/>
-                        <outlet property="topTextField" destination="Zmx-UT-hsy" id="jJ7-1M-zFs"/>
+                        <outlet property="topTextField" destination="Wp9-3G-sKJ" id="5Od-8w-HUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -123,7 +122,7 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="barColor">
-            <color red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.70200002193450928" green="0.70200002193450928" blue="0.70200002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
