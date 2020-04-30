@@ -18,6 +18,7 @@ class MemeEditorVC: UIViewController {
     @IBOutlet var bottomTextField: UITextField!
     @IBOutlet var bottomBar: UIToolbar!
     
+    @IBOutlet var memeView: UIView!
     
     //MARK: Constants + Variables
 
@@ -83,17 +84,14 @@ class MemeEditorVC: UIViewController {
     //MARK:- Generate Meme
     func generateMemedImage() -> UIImage {
         
-        //Hide unwanted components
-        updateViewsForMeme(true)
-        
         // Render view to an image
-        UIGraphicsBeginImageContext(self.imagePickerView.frame.size)
-        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
-        memedImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
+
+        let renderer = UIGraphicsImageRenderer(bounds: memeView.bounds)
+            let finalImage =  renderer.image { rendererContext in
+                memeView.layer.render(in: rendererContext.cgContext)
+        }
         
-        //bring em back
-        updateViewsForMeme(false)
+        memedImage = finalImage
         
         return memedImage    /// Final meme
     }
