@@ -16,9 +16,7 @@ class MemeEditorVC: UIViewController {
     @IBOutlet var shareButton: UIBarButtonItem!
     @IBOutlet var topTextField: UITextField!
     @IBOutlet var bottomTextField: UITextField!
-    @IBOutlet var topBar: UIToolbar!
     @IBOutlet var bottomBar: UIToolbar!
-    @IBOutlet var superBar: UIView!
     
     
     //MARK: Constants + Variables
@@ -103,8 +101,6 @@ class MemeEditorVC: UIViewController {
     // Hides Top + Bottom Bar in Final Meme
     private func updateViewsForMeme(_ bool : Bool){
         bottomBar.isHidden = bool
-        topBar.isHidden = bool
-        superBar.isHidden = bool
     }
     
     //MARK:- Share Meme
@@ -135,6 +131,7 @@ class MemeEditorVC: UIViewController {
                 self.save()
                 print("Meme successfully shared by"  + (activity?.rawValue ?? "unknown"))
                 activityViewController.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }

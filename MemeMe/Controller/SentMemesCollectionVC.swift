@@ -25,9 +25,14 @@ class SentMemesCollectionVC: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+      //  self.collectionView!.register(SentMemesCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.collectionView.reloadData()
     }
 
     // MARK: UICollectionViewDataSource
@@ -47,6 +52,7 @@ class SentMemesCollectionVC: UICollectionViewController {
         }
         return cell
     }
+    
 
     // MARK: UICollectionViewDelegate
 
